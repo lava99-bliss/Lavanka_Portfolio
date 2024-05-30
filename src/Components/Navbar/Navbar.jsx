@@ -1,6 +1,10 @@
 import "./Navbar.css";
 import React, { useState, useRef } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import lg from "../../../assets/lg.png";
+import menu_open from "../../../assets/menu_open.svg";
+import nav_underline from "../../../assets/nav_underline.svg";
+import menu_close from "../../../assets/menu_close.svg";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
@@ -15,16 +19,11 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <img src="../../assets/lg.png" alt="" />
-      <img
-        src="../../assets/menu_open.svg"
-        onClick={openMenu}
-        alt=""
-        className="nav-mob-open"
-      />
+      <img src={lg} alt="" />
+      <img src={menu_open} onClick={openMenu} alt="" className="nav-mob-open" />
       <ul ref={menuRef} className="nav-menu">
         <img
-          src="../../assets/menu_close.svg"
+          src={menu_close}
           onClick={closeMenu}
           alt=""
           className="nav-mob-close"
@@ -39,11 +38,7 @@ const Navbar = () => {
               Home
             </p>
           </AnchorLink>
-          {menu === "home" ? (
-            <img src="../../assets/nav_underline.svg" alt="" />
-          ) : (
-            <></>
-          )}
+          {menu === "home" ? <img src={nav_underline} alt="" /> : <></>}
         </li>
         <li>
           <AnchorLink className="anchor-link" href="#about">
@@ -55,11 +50,7 @@ const Navbar = () => {
               About Me
             </p>
           </AnchorLink>
-          {menu === "about" ? (
-            <img src="../../assets/nav_underline.svg" alt="" />
-          ) : (
-            <></>
-          )}
+          {menu === "about" ? <img src={nav_underline} alt="" /> : <></>}
         </li>
         <li>
           <AnchorLink className="anchor-link" href="#mywork">
@@ -71,11 +62,7 @@ const Navbar = () => {
               Portfolio
             </p>
           </AnchorLink>
-          {menu === "mywork" ? (
-            <img src="../../assets/nav_underline.svg" alt="" />
-          ) : (
-            <></>
-          )}
+          {menu === "mywork" ? <img src={nav_underline} alt="" /> : <></>}
         </li>
         <li>
           <AnchorLink className="anchor-link" href="#contact">
@@ -87,11 +74,7 @@ const Navbar = () => {
               Contact
             </p>
           </AnchorLink>
-          {menu === "contact" ? (
-            <img src="../../assets/nav_underline.svg" alt="" />
-          ) : (
-            <></>
-          )}
+          {menu === "contact" ? <img src={nav_underline} alt="" /> : <></>}
         </li>
       </ul>
       <div className="nav-connect">

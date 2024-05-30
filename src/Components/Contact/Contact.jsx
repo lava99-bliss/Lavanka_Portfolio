@@ -1,5 +1,9 @@
 import React from "react";
 import "./Contact.css";
+import theme_pattern from "../../../assets/theme_pattern.svg";
+import mail_icon from "../../../assets/mail_icon.svg";
+import call_icon from "../../../assets/call_icon.svg";
+import location_icon from "../../../assets/location_icon.svg";
 
 const Contact = () => {
   const onSubmit = async (event) => {
@@ -29,22 +33,22 @@ const Contact = () => {
     <div id="contact" className="contact">
       <div className="contact-title">
         <h1>Get in touch</h1>
-        <img src="../../assets/theme_pattern.svg" alt="" />
+        <img src={theme_pattern} alt="" />
       </div>
       <div className="contact-section">
         <div className="contact-left">
           <h1>Let's Talk</h1>
           <div className="contact-details">
             <div className="contact-detail">
-              <img src="../../assets/mail_icon.svg" alt="" />
+              <img src={mail_icon} alt="" />
               <p>lavanka6@gmail.com</p>
             </div>
             <div className="contact-detail">
-              <img src="../../assets/call_icon.svg" alt="" />
+              <img src={call_icon} alt="" />
               <p>+94 76-464-2146</p>
             </div>
             <div className="contact-detail">
-              <img src="../../assets/location_icon.svg" alt="" />
+              <img src={location_icon} alt="" />
               <p>Colombo,Sri Lanka</p>
             </div>
           </div>
